@@ -2,14 +2,16 @@ package strava.service;
 
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 
 import strava.dao.UserRepository;
 import strava.entity.User;
 
+@Service
 public class UserService {
 	private UserRepository userRepository;
 	
-    public UserService(UserRepository userRepository) {
+	public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
     public User getUser(String email) {
